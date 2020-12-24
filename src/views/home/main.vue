@@ -1,7 +1,12 @@
 <template>
   <div class="home">
     <div class="bg-header header d-flex ai-center">
-      <img class="ml-5" alt="Vue logo" src="../../assets/logo.png" @click="goHome"/>
+      <img
+        class="ml-5"
+        alt="Vue logo"
+        src="../../assets/logo.png"
+        @click="goHome"
+      />
       <input class="searchinput ml-4 mr-2 text-white" />
       <div
         class="choice text-white d-flex jc-center fs-l"
@@ -14,15 +19,12 @@
     </div>
 
     <router-view />
-    <div class="down bg-header d-flex ai-center text-white">
-      <div class="fs-l ml-5">
+    <div class="down bg-header d-flex ai-center jc-center text-white">
+      <div class="fs-l">
         加入我们！一起交流，一起学习，思维碰撞，去找到一些有趣的东西！
       </div>
-      <div class="fs-m" style="margin-left:400px;">
-        联系我们：+86 13588347013
-      </div>
       <div class="fs-m" style="margin-left:100px;">
-0        邮箱：31801324@stu.zucc.edu.cn
+        联系我们：31801324@stu.zucc.edu.cn
       </div>
     </div>
   </div>
@@ -36,32 +38,32 @@ export default {
         {
           code: 1,
           title: "比赛",
-          path:"contest",
+          path: "contest"
         },
         {
           code: 2,
           title: "排位",
-          path:"ranking",
+          path: "ranking"
         },
         {
           code: 3,
           title: "悬赏",
-          path:"reward",
+          path: "reward"
         },
         {
           code: 4,
           title: "练习",
-          path:"practice",
+          path: "practice"
         }
       ]
     };
   },
-  methods:{
-    onClick(item){
-      this.$router.push(item.path)
+  methods: {
+    onClick(item) {
+      this.$router.push(item.path);
     },
-    goHome(){
-      this.$router.push("index")
+    goHome() {
+      this.$router.push("index");
     }
   }
 };

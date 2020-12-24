@@ -30,7 +30,6 @@ p {
 
 
 //颜色
-
 @each $colorKey,
 $color in $colors {
     .text-#{$colorKey} {

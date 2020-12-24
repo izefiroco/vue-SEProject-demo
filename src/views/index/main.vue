@@ -1,10 +1,25 @@
 <template>
-  <el-carousel :interval="4000" type="card" height="200px">
-    <el-carousel-item v-for="item in 6" :key="item">
-      <h3 class="medium">{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
+  <div id="homepage">
+    <themeground></themeground>
+    <carousel></carousel>
+    <downthree></downthree>
+  </div>
 </template>
+
+<script>
+import themeground from '../../components/home/themeground.vue'
+import carousel from "../../components/home/carousel.vue"
+import downthree from "../../components/home/downthree.vue";
+
+export default {
+  el: "#homepage",
+  components: {
+    carousel,
+    themeground,
+    downthree
+  }
+};
+</script>
 
 <style>
 .el-carousel__item h3 {
@@ -23,3 +38,4 @@
   background-color: #d3dce6;
 }
 </style>
+
